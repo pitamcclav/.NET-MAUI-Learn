@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Learn.Pages.Page2"
+             Title="Page2"
+             BackgroundColor="Maroon">
+    <VerticalStackLayout>
+        <Label 
+            Text="this is page 2!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontAttributes="Bold"
+            FontSize="20"/>
+        <Button Text="Close me"
+                Clicked="ClosePage"/>
+        <Button Text="Page 3"
+                Clicked="Page3"/>
+    </VerticalStackLayout>
+</ContentPage>

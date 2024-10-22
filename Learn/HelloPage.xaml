@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Learn.HelloPage"
+             Title="HelloPage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="100"/>
+        </Grid.ColumnDefinitions>
+        <Label Text="Autoside cell"
+               TextColor="Wheat"
+               BackgroundColor="Blue"/>
+        <BoxView Color="Chocolate"
+                 Grid.Column="1"/>
+        <BoxView Color="CadetBlue"
+                 Grid.Row="1"/>
+        
+        <Label Text="Left over space"
+               Grid.Row="1"
+               Grid.Column="1"
+               TextColor="Purple"
+               BackgroundColor="Aqua"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"/>
+        <Label Text="Span 2 rows or mmore"
+               Grid.RowSpan="2"
+               Grid.Column="2"
+               TextColor="Yellow"
+               BackgroundColor="Magenta"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"/>
+        <Label Text="span 2 colums"
+               Grid.Row="2"
+               Grid.ColumnSpan="2"
+               TextColor="LemonChiffon"
+               BackgroundColor="Red"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"/>
+        <Label Text="fixed 100x100"
+               Grid.Row="2"
+               Grid.Column="2"
+               TextColor="Purple"
+               BackgroundColor="Aqua"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"/>
+        
+        
+       
+    </Grid>    
+</ContentPage>
+
+<!--customize UI appearance on a per-platform basis. This can beachieved in XAML using the
+OnPlatform
+and
+On
+classes-->
+
+<!--<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="...">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform = "iOS" Value ="0, 20, 0, 0"/>
+            <On Platform = "Android" Value="10, 20, 20, 10"/>
+        </OnPlatform>
+    </ContentPage.Padding>
+    ...
+</ContentPage>-->

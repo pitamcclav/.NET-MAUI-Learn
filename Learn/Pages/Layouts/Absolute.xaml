@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Learn.Pages.Layouts.Absolute"
+             Title="Absolute">
+    <AbsoluteLayout>
+        <!--for positioning elements in an absolute layout
+        you can use the following properties
+        AbsoluteLayout.LayoutBounds: defines the position and size of the element(x,y,width,height)
+        AbsoluteLayout.LayoutFlags: defines how the element is positioned(xProportional,yProportional,WidthProportional,HeightProportional)
+        when we combine the xProportinal and yProportional we use the PositionProportional
+        when we combine the widthProportional and heightProportional we use the sizeProportional
+        and we provide the values of x,y,width,height for the layoutbounds in percentage(.4,.6)-->
+        
+        <Button Text="Fixed"
+                AbsoluteLayout.LayoutBounds="10,20,200,50"
+                Clicked="ToFlex"/>
+            <!--AbsoluteLayout.LayoutBounds="x,y,w,h"-->
+        <Button Text="HeightProportional"
+                AbsoluteLayout.LayoutFlags="HeightProportional"
+                AbsoluteLayout.LayoutBounds="10,90,250,.2"/>
+        <Button Text="WidthProportional"
+                AbsoluteLayout.LayoutFlags="WidthProportional"
+                AbsoluteLayout.LayoutBounds="10,200,.4,50"/>
+        <Button Text="SizeProportional"
+                AbsoluteLayout.LayoutFlags="SizeProportional"
+                AbsoluteLayout.LayoutBounds="10,270,.4,.2"/>
+        <Button Text=" X-Proportional"
+                AbsoluteLayout.LayoutBounds=".1,380,200,50"
+                AbsoluteLayout.LayoutFlags="XProportional"/>
+        <Button Text="Y-Proportional"
+                BackgroundColor="Yellow"
+                AbsoluteLayout.LayoutBounds="10,.5,200,50"
+                AbsoluteLayout.LayoutFlags="YProportional"/>
+        <Button Text="PositionProportional"
+                BackgroundColor="Red"
+                AbsoluteLayout.LayoutBounds=".1,.6,200,50"
+                AbsoluteLayout.LayoutFlags="PositionProportional"/>
+        <Button Text="AllProportional"
+                BackgroundColor="Green"
+                AbsoluteLayout.LayoutBounds=".1,.7,.4,.2"
+                AbsoluteLayout.LayoutFlags="All"/>
+    </AbsoluteLayout>
+</ContentPage>

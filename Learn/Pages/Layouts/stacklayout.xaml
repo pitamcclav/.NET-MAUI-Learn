@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Learn.Pages.Layouts.stacklayout"
+             Title="stacklayout"
+             BackgroundColor="White">
+
+    <ScrollView Orientation="Vertical">
+        <StackLayout Padding="10" Spacing="5"
+                     BackgroundColor="Red"
+                     Orientation="Vertical"
+                     VerticalOptions="Center">
+            <Label Text="Hello am a stack layout"
+                   FontSize="20"
+                   />
+            <Button Text="one"/>
+            <Button Text="ToGrid"
+                    Clicked="Button_Clicked"/>
+
+        </StackLayout>
+        <!--we can use verticalstacklayout or horizontalstacklayout instead of using the stacklout orientation-->
+    </ScrollView>
+
+
+</ContentPage>

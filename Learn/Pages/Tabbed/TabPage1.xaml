@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Learn.Pages.Tabbed.TabPage1"
+             Title="TabPage1"
+            SelectedTabColor="BlueViolet"
+            >
+    
+    <!--to add icons use the iconimagesource  attribute for the content pages-->
+    <ContentPage Title="Home">
+        <Label 
+            Text="Welcome Home"
+             
+            FontSize="20"/>
+    </ContentPage>
+    <ContentPage Title="Cart">
+        <Label 
+            Text="welcome Cart"
+            
+            FontSize="20"/>
+    </ContentPage>
+    <ContentPage Title="Proile">
+        <Label 
+            Text="welcome Profile"
+            
+            FontSize="20"/>
+    </ContentPage>
+</TabbedPage>

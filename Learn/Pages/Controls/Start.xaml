@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Learn.Pages.Controls.Start"
+             Title="Start"
+             >
+    <ScrollView>
+        <FlexLayout Direction="Column">
+            <Frame Margin="10" BackgroundColor="AliceBlue" VerticalOptions="End" >
+                <VerticalStackLayout Spacing="5" FlexLayout.Grow="1" >
+                    <Button x:Name="commonControls" Text="Common Controls" Clicked="Button_Clicked"/>
+                    <Button x:Name="actionControls" Text="Action Controls" Clicked="Button_Clicked_1"/>
+
+                </VerticalStackLayout>
+            </Frame>
+        </FlexLayout>
+    </ScrollView>
+    
+</ContentPage>

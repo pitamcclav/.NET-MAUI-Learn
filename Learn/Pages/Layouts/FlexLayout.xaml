@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Learn.Pages.Layouts.FlexLayout"
+             Title="FlexLayout">
+    <!--flex layout attributes
+    
+        justify content -> aligns items horizontally
+        justify content -> aligns items vertically
+        align items -> aligns items center(centre), start(top left), end(bottom left), stretch (default from top to bottom)      
+        align content -> aligns items horizontally
+        align content -> aligns items vertically
+        flex direction -> row or column
+        flex wrap -> wrap or no wrap (default) 
+        flex grow -> 0 to 1 ***amount of space to grow relative to other items
+        flex shrink -> 0 to 1 ***amount of space to shrink relative to other items
+        flex basis -> 0 to 1 ***amount of space to take up relative to other items
+        ****direction -> row or column**
+        columnn ->aligns items vertically
+        column reverse -> from bottom to top 
+        row -> default
+        rowreverse-> aligned from right to left-->
+    <FlexLayout Direction="Column">
+        <!--<Button Text="Button1" 
+                BackgroundColor="Green"
+                FlexLayout.Grow="1"
+                Clicked="Button_Clicked"/>
+        <Button Text="Button2" FlexLayout.Basis="100" FlexLayout.Order="-1"/>-->
+        <Label Text="Welcome to My App"
+               BackgroundColor="DarkGray"
+               FontAttributes="Bold"
+                FontSize="Large"
+               HorizontalTextAlignment="Center"
+              />
+        <FlexLayout FlexLayout.Grow="1">
+            <VerticalStackLayout BackgroundColor="Beige" FlexLayout.Basis="50">
+            </VerticalStackLayout>
+            <VerticalStackLayout BackgroundColor="White" FlexLayout.Grow="1">
+            </VerticalStackLayout>
+            <VerticalStackLayout BackgroundColor="Beige" FlexLayout.Basis="50">
+            </VerticalStackLayout>
+        </FlexLayout>
+        
+        <Label Text="End"
+                BackgroundColor="DarkGray"
+                FontAttributes="Bold"
+                 FontSize="Large"
+               Padding="18"
+                HorizontalTextAlignment="Center"
+                  />
+    </FlexLayout>
+</ContentPage>

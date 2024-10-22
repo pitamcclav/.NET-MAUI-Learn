@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Learn.Pages.Controls.ActionControls"
+             Title="Action Controls"
+             BackgroundColor="#EAEEFA">
+
+    <ScrollView>
+        <VerticalStackLayout>
+            <Frame Margin="10" BackgroundColor="AliceBlue">
+                <Button Text="Button" Clicked="Alert" x:Name="button" />
+            </Frame>
+
+            <Frame Margin="10" BackgroundColor="AliceBlue">
+                <ImageButton Source="icon.avif" x:Name="imageButton" Clicked="Alert" HeightRequest="60"/>
+            </Frame>
+
+            <Frame Margin="10" BackgroundColor="AliceBlue">
+                <SearchBar x:Name="search" Placeholder="Search" SearchButtonPressed="SearchClicked" />
+            </Frame>
+
+            <SwipeView>
+                <SwipeView.LeftItems>
+                    <SwipeItems>
+                        <SwipeItem Text="Archive" IconImageSource="icon.avif" BackgroundColor="LightBlue" />
+                        <SwipeItem Text="Delete" IconImageSource="icon.avif" BackgroundColor="LightPink" />
+                    </SwipeItems>
+                </SwipeView.LeftItems>
+                <VerticalStackLayout>
+                    <Label Text="Swipe me"
+                           HorizontalOptions="Center"
+                           Padding="10"
+                           FontSize="Medium"
+                           BackgroundColor="ForestGreen"
+                           FontAttributes="Bold"/>
+                    
+                </VerticalStackLayout>
+            </SwipeView>
+        </VerticalStackLayout>
+    </ScrollView>
+    
+
+</ContentPage>

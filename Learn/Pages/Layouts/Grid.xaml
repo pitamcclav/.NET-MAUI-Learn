@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Learn.Pages.Layouts.Grid"
+             Title="Grid">
+    <Grid ColumnSpacing="5" RowSpacing="5">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+
+            <!--properties **height =='*' means use avilable space 'auto' takes the needed space '.number*' uses units-->
+            <!--for columns we use width instead of height-->
+            <!--we also have the column span and rowspan-->
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+
+        </Grid.ColumnDefinitions>
+        <Label Text="Hello"
+               FontSize="20"
+               Grid.Row="0"
+               Grid.Column="0"
+               BackgroundColor="Red"
+               />
+        <Label Text="World"
+               FontSize="20"
+               Grid.Row="0"
+               Grid.Column="1"
+               BackgroundColor="Blue"/>
+        <Label Text="Hello"
+               FontSize="20"
+               Grid.Row="1"
+               Grid.Column="0"
+               BackgroundColor="Red"
+               />
+        <Label Text="World"
+               FontSize="20"
+               Grid.Row="1"
+               Grid.Column="1"
+               BackgroundColor="Blue"/>
+
+        <Button Text="go to absolute"
+                Clicked="Button_Clicked"
+                Grid.Row="2"
+                Grid.ColumnSpan="3"
+                Margin="5"/>
+    </Grid>
+</ContentPage>
